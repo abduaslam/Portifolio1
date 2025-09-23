@@ -1,0 +1,170 @@
+
+body{
+    background-color: black;
+}
+.container {
+    background-color: #5682B1;
+    margin-left: 0%;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    background-color: #162507;
+    color: #fff;
+    border-radius: 5px;
+    position: fixed;
+    left: 0;
+    top: 0;
+   
+  
+    
+}
+ 
+.logo {
+
+    padding: 12px;
+
+}
+
+.logo span {
+    color: white;
+    font-size: 32px;
+    font-weight: 800;
+    color: rgb(253, 167, 8);
+
+
+}
+
+.navbar img {
+    width: 80px;
+    height: 80px;
+    background-color: rgb(15, 235, 63);
+    margin-top: 0%;
+    border-radius: 0% 20%;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding-right: 9px;
+    margin-left: 30%;
+
+}
+
+.navbar ul li {
+    padding: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    font-size:13px;
+
+}
+
+.navbar ul li :hover {
+    color: rgb(221, 142, 24);
+    background-color: rgb(0, 255, 55);
+    
+
+
+}
+
+.navbar ul li a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    width: 100px;
+    height: 100px;
+
+}
+
+.hero {
+     /* background-image: url(./images/portfolio-3.jpg); */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-self: center;
+    color: #fff;
+    
+}
+
+.image {
+    width: 80%;
+}
+
+.image img {
+    width: 320px;
+    height: 450px;
+    border-radius: 30%;
+    object-fit: fill;
+    margin-top: 20%;
+
+}
+
+.herop {
+
+    width: 100%;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.herop p {
+    padding: 7px;
+    font-weight: 600;
+   font-size: 14px;
+    font-weight: 600;
+    font-style: oblique;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+}
+
+.herop button {
+    background-color: rgb(30, 255, 0);
+    width: 200px;
+    height: 43px;
+    font-size: 18px;
+    color: white;
+    /* text-align: center; */
+}
+ button :hover {
+    color: rgb(221, 142, 24);
+    background-color: rgb(0, 255, 55);
+    
+}
+
+.about{
+    width: 1268px;
+    height: 550px;
+}
+
+.service{
+    width: 1268px;
+    height: 550px;
+}
+.project{
+    width: 1268px;
+    height: 550px;
+}
+.contact{
+  width: 1268px;
+    height: 550px;
+}
+.blog{
+  width: 1268px;
+    height: 550px;
+}
+.skills{
+  width: 1268px;
+    height: 550px;
+}
+
+
