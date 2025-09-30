@@ -11,6 +11,12 @@ body {
   color: #fff;
   background-color: #f9f9f9;
 }
+#checkbox{
+  display: none;
+}
+.menu{
+  display: none;
+}
 
 .container {
   background-color: #000000;
@@ -35,12 +41,34 @@ body {
 }
 
 
+
+@media (max-width:480px) {
+  .navbar .list-item{
+    
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+  
+    background-color: #009624;
+  }
+  .menu{
+    display: block;
+    padding: 20px;
+  }
+}
+
+@media (min-width:481px) {
+  .navbar .select_option {
+    display: none;
+  }
+}
 .logo {
   margin-left: 1rem;
   background-color: #c90fdac0;
   border-radius: 15px 0px 15px 0px;
 
 }
+
 
 .logo img {
   height: 3rem;
@@ -317,21 +345,27 @@ body {
 
 
 .contact-icon {
-  background-color: #0096233b;
+  background-color: #c1d3c577;
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 3rem;
   margin: 2rem;
   border-radius: 15px;
-}
-
-.contact-icon {
-  color: #0066cc;
-  font-size: 50px;
+   color: #0066cc;
+  font-size: 15px;
   border: 3px solid red;
 }
+
+  
+
+
+/* .contact-icon {
+  color: #0066cc;
+  font-size: 15px;
+  border: 3px solid red;
+} */
 
 .contact-form {
   background-color: #003e80;
@@ -563,4 +597,11 @@ footer {
   margin-top: 2rem;
   border-top: 2px solid #eee;
   color: #555;
+}
+
+
+/* Responsines */
+@media screen {
+  n
+  
 }
