@@ -36,32 +36,47 @@ body {
   border-bottom: 2px solid #eee;
   position: sticky;
   top: 0;
-  background-color: #b6a3a3;
+  background-color: #aaf008;
   z-index: 1000;
 }
 
-
-
-@media (max-width:480px) {
+ .menu{
+  display: none;
+ }
+@media (max-width:670px) {
   .navbar .list-item{
-    
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #c5c0c0b4;
+    flex-direction: column;
+    width: 200px;
+    padding:1rem;
     display: none;
     justify-content: center;
-    flex-direction: column;
+    color: #009624;
   
-    background-color: #009624;
   }
-  .menu{
-    display: block;
-    padding: 20px;
-  }
-}
 
-@media (min-width:481px) {
-  .navbar .select_option {
-    display: none;
+  .navbar .list-item li{
+    justify-content: center;
   }
-}
+   .menu{
+    display: block;
+    padding: 30px;
+    width: 40px  ;
+            
+   
+    margin-right:5% ;
+  }  
+  #checkbox:checked ~ .list-item{
+    display: flex;
+      color: #009624;
+  }
+} 
+
+
+
 .logo {
   margin-left: 1rem;
   background-color: #c90fdac0;
@@ -141,7 +156,7 @@ body {
 .hero .image img {
   width: 90%;
   border-radius: 50%;
-  box-shadow: 0px 0px 30px  blueviolet;
+  box-shadow: 0px 0px 30px  rgb(126, 240, 61);
 }
 
 
@@ -276,6 +291,37 @@ body {
 
 }
 
+/* my blog */
+.blog{
+  display: flex;
+  max-width: 100%;
+  width: 600px;
+}
+.blog-head-pragraph {
+  padding: 9px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 12px;
+  font-size: 18px;
+  color: #474242;
+}
+
+.blog-head-pragraph p {
+  color: #003e80;
+}
+
+.blog-head-pragraph a {
+  text-decoration: none;
+
+}
+
+.blog-head-pragraph a :hover {
+  background-color: #4272a5;
+  color: rebeccapurple;
+}
+
+
 #front {
   color: #f9f9f9;
   background-image: url(./images/front.png);
@@ -319,29 +365,6 @@ body {
 
 
 
-.blog-head-pragraph {
-  padding: 9px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 12px;
-  font-size: 18px;
-  color: #474242;
-}
-
-.blog-head-pragraph p {
-  color: #003e80;
-}
-
-.blog-head-pragraph a {
-  text-decoration: none;
-
-}
-
-.blog-head-pragraph a :hover {
-  background-color: #4272a5;
-  color: rebeccapurple;
-}
 
 
 .contact-icon {
@@ -600,8 +623,4 @@ footer {
 }
 
 
-/* Responsines */
-@media screen {
-  n
-  
-}
+
