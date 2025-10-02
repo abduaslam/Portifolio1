@@ -80,7 +80,7 @@ body {
 
 .logo {
   margin-left: 1rem;
-  background-color: #c90fdac0;
+  background-color: #f0aa13ee;
   border-radius: 15px 0px 15px 0px;
 
 }
@@ -151,9 +151,13 @@ body {
 }
 
 .button:hover {
+  color: #c7c2cc;
+}
   background: #009624;
 }
 
+  color: #c7c2cc;
+}
 .hero .image img {
   width: 90%;
   border-radius: 50%;
