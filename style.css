@@ -523,4 +523,33 @@ footer {
 }
 
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
 
