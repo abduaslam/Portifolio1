@@ -153,11 +153,7 @@ body {
 .button:hover {
   color: #c7c2cc;
 }
-  background: #009624;
-}
-
-  color: #c7c2cc;
-}
+  
 .hero .image img {
   width: 90%;
   border-radius: 50%;
@@ -441,7 +437,7 @@ transform:translateY(-10px);
 
 /* Sign-in box */
 .sign-in {
-  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  background: linear-gradient(135deg, #419641, #2c2929);
   width: 60%; 
   max-width: 450px;
   min-height: 420px;
