@@ -174,7 +174,22 @@ body {
   color: #00c853;
 }
 
+.service2 ul li{
+  list-style: none;
+  padding: 9px;
+}
 
+.service2 h1{
+  color: #009624;
+}
+  
+
+/* my service2 */
+
+.service2 ul li{
+  padding: 9px;
+  list-style: none;
+}
 
 
 /* Projects */
@@ -234,6 +249,136 @@ color: #009624;
 background-color: #003c96;
 transform:translateY(-10px);
 
+}.dropdown-content {.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 .skill-card img{
   border-radius: 10px;
@@ -400,7 +545,59 @@ transform:translateY(-10px);
   padding: 5%;
   background-color: #f7f7f79d;
   align-items: center;
-  justify-content: center;
+  justify-content: center;.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 }
 
 
@@ -462,6 +659,32 @@ transform:translateY(-10px);
   outline: none;
   border-radius: 10px;
   margin-bottom: 12px;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .sign-in button {
@@ -527,6 +750,29 @@ footer {
   display: none;
   position: absolute;
   background: #222;
+  min-width: 120px;.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
   min-width: 120px;
   top: 35px;
   border-radius: 6px;
@@ -537,6 +783,113 @@ footer {
   display: block;
 }
 
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #222;
+  min-width: 120px;
+  top: 35px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background: #004182;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 .dropdown-content a {
   display: block;
   padding: 10px;
