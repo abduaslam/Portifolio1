@@ -1,353 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portoflio</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anil Portfolio</title>
 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    /* Animated gradient for hero background */
+    .animated-gradient {
+      background: linear-gradient(-45deg, #1e3a8a, #9333ea, #c78b23, #3863da);
+      background-size: 400% 400%;
+      animation: gradientShift 10s ease infinite;
+    }
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </head>
+<body class="bg-gray-900 text-white font-semibold text-black">
 
-<body>
-    <div class="container">
-
-
-        <div class="navbar">
-            <div class="logo">
-                <!-- <span>logo</span> -->
-                <img src="./images/image1.png" alt="">
-            </div>
-
-
-            <input type="checkbox" name="checkbox" id="checkbox">
-            <label for="checkbox" class="menu">☰</label>
-            <ul class="list-item">
-
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About me</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#contact">Contact me</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-
-                <li><a href="./sign-in.html">Login</a></li>
-                <li><a href="./sing-up.html">Sign up</a></li>
-
-                <li class="dropdown">
-      <a href="#">🌐 Language ▾</a>
-      <ul class="dropdown-content">
-        <li><a href="?lang=en">English</a></li>
-        <li><a href="?lang=fr">Français</a></li>
-        <li><a href="?lang=ar">العربية</a></li>
-      </ul>
-
-            </ul>
-
-        </div>
-        <hr><br>
-        <hr>
-
-        <div class="hero" id="hero">
-             <div class="hero-left">
-        <h1>Hi, I’m <span class="accent">
-            <ul>
-                <li>Abdu Asalam</li>
-                <li>Data Analyst</li>
-                <li>Backend Devolper</li>
-            </ul>
-        </span></h1>
-        <p class="hero-sub">Data Analyst & Backend Developer — I turn data into insights and build reliable backend systems.</p>
-        <div class="hero-cta">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn outline" href="https://github.com/abduaslam" target="_blank" rel="noopener">GitHub</a>
-        </div>
-        <ul class="hero-meta">
-          <li><strong>Location:</strong> Rwanda</li>
-          <li><strong>Email:</strong> <a href="mailto:abduaslam098@gmail.com">abduaslam098@gmail.com</a></li>
-        </ul>
+  <!-- 🌐 Navbar -->
+  <nav class="backdrop-blur-lg bg-gray-800/70 fixed w-full top-0 left-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center py-3 px-6">
+      <div class="flex items-center space-x-3">
+        <img src="./images/image1.png" alt="Logo" class="w-14 h-14 rounded-full bg-yellow-500">
+      
       </div>
-            <div class="image">
-                <img src="./images/A.png" alt="Hero image">
-            </div>
 
-        </div>
-        <hr>
+      <input type="checkbox" id="checkbox" class="hidden peer">
+      <label for="checkbox" class="menu md:hidden text-3xl cursor-pointer text-yellow-400">☰</label>
 
-
-        <div class="about" id="about" style="color: white;">
-
-            <div class="about1">
-                <h2>About me</h2>
-                <p>Hi, I’m Abdu Asalam, a passionate Data Analyst and Backend Developer who loves turning data into
-                    insights and building scalable backend systems.</p>
-           
-                   </div>
-            <div class="about1">
-                <h2>What I Do</h2>
-                <p>I specialize in analyzing complex datasets, creating interactive dashboards, and building secure
-                    and efficient backend APIs. I work with tools like SQL, Python, and Excel for data, and
-                    frameworks like Node.js or Django for backend development.</p>
-            </div>
-            <div class="about1">
-                <h2>my mission</h2>
-                <p>My goal is to help businesses make data-driven decisions and to develop reliable backend systems
-                    that scale with growth.</p>
-            </div>
-
-
-        </div>
-
-        <hr>
-        <div class="service" id="services" style="color: white;">
-          
-            <div class="service2">
-                
-
-
-        </ul>
-                <ul>
-                    <li>
-                        <h3>Data Cleaning & Transformation</h3>
-                    </li>
-
-                    <li>
-                        <p>Preparing raw data for analysis by removing errors, duplicates, and inconsistencies.</p>
-                    </li>
-
-                    <li>
-                        <h3>Data Analysis & Insights</h3>
-                    </li>
-                    <li>
-                        <p>Turning data into actionable insights with reports, charts, and visualizations (Excel,
-                            Power BI, Python).</p>
-                    </li>
-                    <li>
-                        <h3>Backend Development</h3>
-                    </li>
-                    <li>
-                        <p>Designing and developing REST APIs and backend systems using Node.js, Django, or Flask.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Automation & Scripting</h3>
-                    </li>
-                    <li>
-                        <p>Writing scripts to automate repetitive tasks, saving time and effort.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <hr>
-
-
-        <h2>My projects</h2>
-        <div class="project" id="project">
-
-            <div class="project-card" id="projects">
-
-                <h3>Portfolio Website</h3>
-                <p>A responsive personal portfolio website built using <b>HTML and CSS</b>.
-                    Features include navigation, project showcase, and contact form.</p>
-                <a href=" https://abduaslam.github.io/Portifolio1/" target="_blank">View Project</a>
-            </div>
-
-            <div class="project-card" id="projects">
-
-                <div class="project-card">
-                    <h3>Portfolio Design (Figma)</h3>
-                    <p>Designed a personal portfolio layout in <b>Figma</b> before development.
-                        The design includes sections like About, Skills, Projects, Blog, and Contact.
-                        Focused on clean UI, responsive grids, and modern colors.</p>
-                    <a href="https://www.figma.com/proto/ypn6DoLC0fIHpNYxPoipRp/Portfolio-one?node-id=50-6&p=f&t=FlOAvJwAgH8YZH3L-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=50%3A6"
-                        target="_blank">View Design</a>
-                </div>
-
-            </div>
-
-            <div class="project-card" id="projects">
-                <h3>Web Scraping Project</h3>
-                <p>Built a <b>Python web scraping tool</b> using <b>BeautifulSoup</b> and <b>Requests</b>
-                    to collect product prices from e-commerce websites.
-                    The data was cleaned and stored in <b>CSV/Excel</b> for analysis.</p>
-                <a href="https://github.com/abduaslam/Webscrapping" target="_blank">View in GitHub</a><br>
-                <a href="https://github.com/abduaslam/Webscrapping" target="_blank">View in Kaggle</a>
-            </div>
-
-            <div class="project-card" id="projects">
-
-                <h3>Sales Performance Dashboard (Excel)</h3>
-                <p>Created an interactive <b>Excel dashboard</b> to track monthly sales performance.
-                    Used <b>PivotTables, PivotCharts, Slicers</b>, and <b>Power Query</b> to clean and analyze the data.
-                    The dashboard helps visualize key metrics like revenue, top products, and regional performance.</p>
-                <a href="https://github.com/yourusername/excel-dashboard" target="_blank">View Project</a>
-
-
-            </div>
-
-            <div class="project-card" id="projects">
-
-    <h3>House Price Prediction (Machine Learning)</h3>
-    <p>
-        Developed a <b>regression-based machine learning model</b> to predict housing prices using 
-        <b>Python, Pandas, NumPy, Scikit-learn</b>. Performed <b>data cleaning, feature engineering, and exploratory data analysis (EDA)</b>. 
-        Trained models like <b>Linear Regression</b> and <b>Gradient Boosting</b> to estimate property prices based on features such as 
-        location, size, and number of rooms. The model achieved high accuracy in predicting real-estate prices.
-    </p>
-    <a href="https://colab.research.google.com/drive/1IhNkGPqbSuGky1SCzH8Fj0r36OwdDVea#scrollTo=af0bd47c-a3b1-45aa-8463-4814cd6e0774" target="_blank">View Project in GitHub</a><br>
-      <a href="https://github.com/abduaslam/machine-learning" target="_blank">View Project in google colab</a>
-
-</div>
-
-        </div>
-        <hr>
-        <h2>My Skills</h2>
-        <section class="Skills" id="Skills">
-
-
-            <!-- <div class="skills-grid"> -->
-
-            <!-- Frontend Skills -->
-            <div class="skill-card" id="front">
-                <h3>Frontend Development</h3>
-                <img src="./images/front.png" alt="" style="width: 10rem;">
-                <ul>
-                    <li>HTML5</li>
-                    <li>CSS3 (Flexbox, Grid)</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>React (basic)</li>
-                </ul>
-            </div>
-
-            <!-- Backend Skills -->
-            <div class="skill-card" id="back">
-                <h3>Backend Development</h3>
-                 <img src="./images/back.jpg" alt="" style="width: 10rem;">
-                <ul>
-                    <li>Node.js & Express</li>
-                    <li>Django</li>
-                    <li>REST API Development</li>
-                    <li>Authentication (JWT, OAuth)</li>
-                </ul>
-            </div>
-
-            <!-- Data Analysis Skills -->
-            <div class="skill-card" id="analysis">
-                <h3>Data Analysis</h3>
-                 <img src="./images/analysis.jpeg" alt="" style="width: 10rem;">
-                <ul>
-                    <li>Python (Pandas, NumPy, Matplotlib)</li>
-                    <li>SQL (MySQL, PostgreSQL)</li>
-                    <li>Power BI, Excel</li>
-                    <li>Data Cleaning & Transformation</li>
-                </ul>
-            </div>
-
-            <!-- Tools & Version Control -->
-            <div class="skill-card" id="version">
-                <h3>Tools & Version Control</h3>
-                 <img src="./images/version.jpeg" alt="" style="width: 10rem;">
-                <ul>
-                    <li>Git & GitHub</li>
-                    <li>Docker (Basic)</li>
-                    <li>VS Code, Jupyter Notebook</li>
-                    <li>Postman (API Testing)</li>
-                </ul>
-            </div>
-
-        </section>
-
-
-        <hr>
-         
-        <h2 style="color:green ;">Contact Me</h2> 
-        <p>Have a project or want to work together? Let's talk!</p>
-
-        <section class="contact-section" id="contact">
-
-            <div class="contact-icon">
-               
-                <div class="email">
-                    <img src="./images/email.png" alt=""  >
-                    <p>Email Me</p>
-                    <p><a href="abduaslam098@gmail.com">abduaslam098@gmail.com</a></p>
-                </div><br>
-
-                <div class="call">
-                    <img src="./images/call.jpg" alt="" style="width: 2rem;">
-                    <p>Call Me</p>
-                    <p><a href="">0795338045</a></p>
-                </div><br>
-
-                <div class="email">
-
-                    <img src="./images/location.png" alt="">
-                    <p>Location</p>
-                    <p><a href="">Rwanda</a></p>
-                </div>
-
-
-            </div>
-
-            <!-- Contact Form -->
-            <form class="contact-form" action=https://formsubmit.co/abduaslam098@gmail.com method="POST">
-                <label for="" class="form2">Enter your name</label><br>
-                <input type="text" class="form-1" placeholder="Your Name" required><br>
-                <label for="" class="form2">Enter your Email</label><br>
-                <input type="email" class="form-1" placeholder="Your Email" required><br>
-                <label for="" class="form2">Message</label><br>
-                <textarea class="form-1" placeholder="Your Message" required></textarea><br>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-
-        <hr>
-
-      <footer class="footer">
-  <div class="footer-container">
-
-    <!-- Left: About -->
-    <div class="footer-about">
-      <h3>About Me</h3>
-      <p>I'm Abdu Asalam — Data Analyst & Backend Developer passionate about turning data into insights and building smart web solutions.</p>
-    </div>
-
-    <!-- Middle: Quick Links -->
-    <div class="footer-links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#project">Projects</a></li>
-        <li><a href="#Skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <ul class="absolute md:static bg-gray-800/90 md:bg-transparent top-[60px] left-0 w-full md:w-auto flex flex-col md:flex-row items-center md:space-x-8 space-y-6 md:space-y-0 py-6 md:py-0 text-lg font-medium transition-all duration-300 ease-in-out hidden md:flex peer-checked:flex">
+        <li><a href="#hero" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="#about" class="hover:text-yellow-400">About</a></li>
+        <li><a href="#services" class="hover:text-yellow-400">Services</a></li>
+        <li><a href="#project" class="hover:text-yellow-400">Projects</a></li>
+        <li><a href="#Skills" class="hover:text-yellow-400">Skills</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+        <li><a href="./blog.html" class="hover:text-yellow-400">Blog</a></li>
+        <li><a href="./sign-in.html" class="hover:text-yellow-400">Login</a></li>
+        <li><a href="./sign-up.html" class="hover:text-yellow-400">Sign Up</a></li>
       </ul>
     </div>
+  </nav>
 
-    <!-- Right: Social Media -->
-    <div class="footer-social">
-      <h3>Follow Me</h3>
-      <div class="social-icons">
-        <a href="https://github.com/abduaslam" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+  <div class="h-[70px]"></div>
+
+  <!-- 🎨 Hero Section -->
+  <section id="hero" class="animated-gradient min-h-[90vh] flex flex-col md:flex-row justify-center items-center gap-12 px-10 text-center md:text-left fade-in">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Hi, I'm <span class="text-yellow-300">Abduaslam</span></h1>
+      <p class="text-xl md:text-2xl text-gray-200 mb-6">A Data Analyst & Backend Developer</p>
+      <p class="text-gray-100 mb-8 leading-relaxed">I build responsive, modern websites with clean design, smooth user experience, and powerful data-driven backends.</p>
+      
+      <div class="flex justify-center md:justify-start space-x-4 mb-8">
+        <a href="#project" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">View My Work</a>
+        <a href="#contact" class="border border-yellow-400 text-yellow-300 hover:bg-yellow-400 hover:text-gray-900 px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">Contact Me</a>
+      </div>
+
+      <div class="flex justify-center md:justify-start space-x-6 text-2xl">
+        <a href="https://linkedin.com" target="_blank" class="hover:text-yellow-400"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank" class="hover:text-yellow-400"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com" target="_blank" class="hover:text-yellow-400"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" class="hover:text-yellow-400"><i class="fab fa-x-twitter"></i></a>
       </div>
     </div>
-  </div>
 
-  <hr>
-
-  <p class="footer-bottom">© 2025 Abdu Asalam | All Rights Reserved</p>
-</footer>
-
-
+    <div class="md:w-1/3">
+      <img src="./images/A.png" alt="Profile" class="w-60 h-60 md:w-72 md:h-72 rounded-full border-4 border-yellow-400 shadow-xl hover:scale-105 hover:rotate-3 transition-transform duration-500">
     </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 px-10 bg-gray-900 font-semibold">
+    <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">About Me</h2>
+    <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div class="p-6 bg-white text-black rounded-2xl shadow-lg ">
+        <h3 class="text-2xl font-semibold mb-3">Who I Am</h3>
+        <p>I’m Abdu Asalam, a passionate Data Analyst and Backend Developer who loves turning data into insights and building scalable systems.</p>
+      </div>
+       <div class="p-6 bg-white text-black rounded-2xl shadow-lg ">
+        <h3 class="text-2xl font-semibold mb-3">What I Do</h3>
+        <p>I analyze datasets, create dashboards, and build secure APIs using Python, SQL, and Node.js.</p>
+      </div>
+      <div class="p-6 bg-white text-black rounded-2xl shadow-lg font-semibold">
+        <h3 class="text-2xl font-semibold mb-3">My Mission</h3>
+        <p>To help businesses make data-driven decisions and create reliable, scalable backend solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🛠 Services -->
+  <section id="services" class="py-20 px-10 bg-gray-800">
+    <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">My Services</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
+        <h3 class="text-xl font-semibold mb-2">Data Cleaning</h3>
+        <p>Prepare and clean raw data for analysis by removing errors and inconsistencies.</p>
+      </div>
+     <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
+        <h3 class="text-xl font-semibold mb-2">Data Analysis</h3>
+        <p>Transform data into actionable insights using Python, Excel, or Power BI.</p>
+      </div>
+     <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
+        <h3 class="text-xl font-semibold mb-2">Backend Development</h3>
+        <p>Design and build RESTful APIs and backend systems using Django or Node.js.</p>
+      </div>
+     <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
+        <h3 class="text-xl font-semibold mb-2">Automation</h3>
+        <p>Automate repetitive tasks and improve workflow efficiency using scripting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🚀 Projects -->
+  <section id="project" class="py-20 px-10 bg-gray-900">
+    <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Projects</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+        <p>A responsive personal website showcasing my work and skills.</p>
+        <a href="https://abduaslam.github.io/Portifolio1/" class="text-yellow-400 hover:underline mt-3 block">View Project →</a>
+      </div>
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Figma Design</h3>
+        <p>Modern portfolio UI created in Figma focusing on minimal, responsive layout.</p>
+        <a href="#" class="text-yellow-400 hover:underline mt-3 block">View Design →</a>
+      </div>
+       <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-semibold mb-2">Web Scraping</h3>
+        <p>Python web scraper for e-commerce data collection and analysis.</p>
+        <a href="#" class="text-yellow-400 hover:underline mt-3 block">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧠 Skills -->
+  <section id="Skills" class="py-20 px-10 bg-gray-800">
+    <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">My Skills</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div class="p-6 bg-white text-black ounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold mb-3">Frontend</h3>
+        <ul class="space-y-2">
+          <li>HTML, CSS, JS</li>
+          <li>React (Basic)</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+        <div class="p-6 bg-white text-black ounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold mb-3">Backend</h3>
+        <ul class="space-y-2 ">
+          <li>Node.js, Express</li>
+          <li>Django</li>
+          <li>REST APIs</li>
+        </ul>
+      </div>
+       <div class="p-6 bg-white text-black ounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold mb-3">Data Analysis</h3>
+        <ul class="space-y-2 ">
+          <li>Python, Pandas, NumPy</li>
+          <li>Power BI, Excel</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="p-6 bg-white text-black ounded-xl shadow-lg">
+        <h3 class="text-xl font-semibold mb-3">Tools</h3>
+        <ul class="space-y-2 ">
+          <li>Git & GitHub</li>
+          <li>VS Code</li>
+          <li>Postman</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📩 Contact -->
+  <section id="contact" class="py-20 px-10 bg-gray-900">
+    <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Contact Me</h2>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+      <div class="space-y-6">
+        <div>
+          <i class="fas fa-envelope text-yellow-400 text-3xl"></i>
+          <p class="mt-2">abduaslam098@gmail.com</p>
+        </div>
+        <div>
+          <i class="fas fa-phone text-yellow-400 text-3xl"></i>
+          <p class="mt-2">+250 796874344</p>
+        </div>
+        <div>
+          <i class="fas fa-map-marker-alt text-yellow-400 text-3xl"></i>
+          <p class="mt-2">Rwanda</p>
+        </div>
+      </div>
+      <form action="https://formsubmit.co/abduaslam098@gmail.com" method="POST" class="bg-white text-black p-6 rounded-xl space-y-4 shadow-lg">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded bg-blue-200 text-black border border-gray-700 focus:ring-2 focus:ring-yellow-400" required>
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded bg-blue-200 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400" required>
+        <textarea name="message" placeholder="Your Message" rows="4" class="w-full p-3 rounded bg-blue-200 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400" required></textarea>
+        <button type="submit" class="w-full bg-yellow-400 text-gray-900 py-3 rounded font-semibold hover:bg-yellow-500 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ⚡ Footer -->
+  <footer class="bg-gray-800 py-10 text-center border-t border-gray-700">
+    <div class="mb-4">
+      <a href="https://github.com/abduaslam" class="mx-3 text-yellow-400 hover:text-yellow-500"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" class="mx-3 text-yellow-400 hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com" class="mx-3 text-yellow-400 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
+      <a href="https://facebook.com" class="mx-3 text-yellow-400 hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
+    </div>
+    <p class="text-gray-400">© 2025 Abdalsalam | All Rights Reserved</p>
+  </footer>
+
+    <script src="./script.js"></script>
 </body>
-
 </html>
+
+
