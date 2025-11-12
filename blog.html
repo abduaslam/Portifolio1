@@ -1,96 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Blog | Abdalsalam Yagoub Idris</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <h1 style="font-size: 40px ;color: rgb(116, 92, 61); font-weight: 700;">My blog</h1>
-    <section class="blog">
-        <div class="backend">
-            <div class="blog-card">
-                <div class="imagg">
-                    <img src="./images/backend.jpeg" alt="Backend API">
-                </div>
-                <div class="blog-head-pragraph">
-                    <h3>Building a REST API with Node.js & Express</h3>
-                    <p>Step-by-step guide to creating a secure REST API with CRUD operations and connecting it
-                        to a MySQL database.</p>
-                    <a href="https://blog.logrocket.com/build-rest-api-node-express-mysql/?utm_source=chatgpt.com">Read
-                        More</a>
-                </div>
+<body class="bg-gray-900 text-gray-100 font-inter  leading-relaxed">
 
+  <!-- Header -->
+  <header class="text-center py-10 border-b border-gray-700">
+    <h1 class="text-4xl font-bold text-yellow-400 tracking-wide">My Blog</h1>
+    <p class="text-white mt-2">Sharing my learning journey in web development and data analysis</p>
+  </header>
 
-            </div>
+  <!-- Blog Section -->
+  <section class="max-w-6xl mx-auto p-6 space-y-10">
 
-        </div>
-        <div class="frontend">
-            <div class="blog-card">
-                <div class="blog-head-pragraph">
-                    <h3>Creating a Responsive Dashboard UI</h3>
-                    <p>How I built a clean, responsive dashboard using HTML, CSS (Flexbox & Grid), and a bit of
-                        JavaScript.</p>
-                    <a
-                        href="https://www.geeksforgeeks.org/javascript/how-to-create-responsive-admin-dashboard-using-html-css-javascript/?utm_source=chatgpt.com">Read
-                        More</a>
-                </div>
-                <div class="imagg">
-                    <img src="./images/blog-frontend.png" alt="Responsive UI">
-                </div>
+    <!-- Backend Blog -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-yellow-400/30 transition p-6 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2">
+        <img src="./images/backend.jpeg" alt="Backend API" class="rounded-xl w-full object-cover">
+      </div>
+      <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
+        <h3 class="text-2xl font-semibold text-yellow-300">Building a REST API with Node.js & Express</h3>
+        <p class="text-white  mt-3">
+          Step-by-step guide to creating a secure REST API with CRUD operations and connecting it to a MySQL database.
+        </p>
+        <a href="https://blog.logrocket.com/build-rest-api-node-express-mysql/?utm_source=chatgpt.com" 
+           class="inline-block mt-4 bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition">
+           Read More
+        </a>
+      </div>
+    </div>
 
-            </div>
+    <!-- Frontend Blog 1 -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-yellow-400/30 transition p-6 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 md:order-2">
+        <img src="./images/blog-frontend.png" alt="Responsive UI" class="rounded-xl w-full object-cover">
+      </div>
+      <div class="md:w-1/2 md:pr-8 mt-6 md:mt-0">
+        <h3 class="text-2xl font-semibold text-yellow-300">Creating a Responsive Dashboard UI</h3>
+        <p class="text-white  mt-3">
+          How I built a clean, responsive dashboard using HTML, CSS (Flexbox & Grid), and a bit of JavaScript.
+        </p>
+        <a href="https://www.geeksforgeeks.org/javascript/how-to-create-responsive-admin-dashboard-using-html-css-javascript/?utm_source=chatgpt.com" 
+           class="inline-block mt-4 bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition">
+           Read More
+        </a>
+      </div>
+    </div>
 
-            <div class="blog-card">
-                <div class="blog-head-pragraph">
-                    <h3>Designing My Portfolio Website</h3>
-                    <p>Behind the scenes of building my personal portfolio — layout, colors, and making it
-                        mobile-friendly.</p>
-                    <a href="https://www.amitgrinson.com/blog/window-function-with-groupby/?utm_source=chatgpt.com">Read
-                        More</a>
-                </div>
-                <div class="imagg">
-                    <img src="./images/my-portoflio.png" alt="Portfolio Project">
-                </div>
-            </div>
+    <!-- Frontend Blog 2 -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-yellow-400/30 transition p-6 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 md:order-2">
+        <img src="./images/my-portoflio.png" alt="Portfolio Project" class="rounded-xl w-full object-cover">
+      </div>
+      <div class="md:w-1/2 md:pr-8 mt-6 md:mt-0">
+        <h3 class="text-2xl font-semibold text-yellow-300">Designing My Portfolio Website</h3>
+        <p class="text-white  mt-3">
+          Behind the scenes of building my personal portfolio — layout, colors, and making it mobile-friendly.
+        </p>
+        <a href="https://www.amitgrinson.com/blog/window-function-with-groupby/?utm_source=chatgpt.com" 
+           class="inline-block mt-4 bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition">
+           Read More
+        </a>
+      </div>
+    </div>
 
-        </div>
-        <div class="data-analysis">
-            <div class="blog-card">
-                <!-- <div class="intro">
-                            <h3>Analyzing Sales Data with Power BI</h3>
-                            <p>Explored a year of sales data, cleaned it in Power Query, and created an interactive
-                                dashboard for insights.</p>
+    <!-- Data Analysis Blog -->
+    <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-yellow-400/30 transition p-6 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2">
+        <img src="./images/query.png" alt="SQL Queries" class="rounded-xl w-full object-cover">
+      </div>
+      <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
+        <h3 class="text-2xl font-semibold text-yellow-300">10 SQL Queries Every Data Analyst Should Know</h3>
+        <p class="text-white  mt-3">
+          From SELECT and JOINs to aggregations and window functions — examples with real-world datasets.
+        </p>
+        <a href="blog-sql-queries.html" 
+           class="inline-block mt-4 bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition">
+           Read More
+        </a>
+      </div>
+    </div>
 
-                            <a href="blog-sales-dashboard.html">Read More</a>
-                        </div>
-                        <div class="imagg">
-                            <img src="./images/blog-data analysis.jpeg" alt="Sales Dashboard">
+  </section>
 
-                        </div> -->
-
-                <!-- <div class="blog-card"> -->
-
-                <div class="imagg">
-                    <img src="./images/query.png" alt="SQL Queries">
-
-                </div>
-                <div class="blog-head-pragraph">
-                    <h3>10 SQL Queries Every Data Analyst Should Know</h3>
-                    <p>From SELECT and JOINs to aggregations and window functions — examples with real-world
-                        datasets.</p>
-                    <a href="blog-sql-queries.html">Read More</a>
-                </div>
-
-            </div>
-        </div>
-
-    </section>
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-10 border-t border-gray-700 mt-12">
+    © 2025 Abdalsalam Yagoub Idris — All rights reserved.
+  </footer>
 
 </body>
-
 </html>
