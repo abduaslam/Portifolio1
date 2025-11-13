@@ -148,10 +148,10 @@
     <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Projects</h2>
     <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
     <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
-  <h3 class="text-xl font-semibold mb-2">Foursity Eight</h3>
+  <h3 class="text-xl font-semibold mb-2">Mahama Care Hospital</h3>
   <img src="./images/mahamaHospital.png"  alt="" class="rounded-2xl  w-15 h-15 mb-10">
   <p class="text-gray-700">
-    A modern web project deployed on Vercel, demonstrating interactive features and responsive design. 
+    This project excuted by me and my friend ,A modern web project deployed on Vercel, demonstrating interactive features and responsive design. 
     Built with JavaScript, HTML, and CSS, it focuses on clean UI and smooth user experience.
   </p>
   <a href="https://foursity-eight.vercel.app/" 
@@ -295,33 +295,8 @@
   <!-- Your hero section -->
   <p id="typing-text"></p>
 
-  <script>
-    const textElement = document.getElementById("typing-text");
-    const roles = ["Web Developer", "Digital Marketer", "UI/UX Designer"];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function typeEffect() {
-      const current = roles[roleIndex];
-      const displayed = current.substring(0, charIndex);
-      textElement.textContent = `I'm a ${displayed}`;
-
-      if (!isDeleting && charIndex < current.length) {
-        charIndex++;
-        setTimeout(typeEffect, 100);
-      } else if (isDeleting && charIndex > 0) {
-        charIndex--;
-        setTimeout(typeEffect, 50);
-      } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) roleIndex = (roleIndex + 1) % roles.length;
-        setTimeout(typeEffect, 1000);
-      }
-    }
-
-    // Start typing once page loads
-    document.addEventListener("DOMContentLoaded", typeEffect);
+  <script src="/script.js">
+ 
   </script>
 </body>
 
