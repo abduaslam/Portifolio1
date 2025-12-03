@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abdalaslam Portfolio</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
     /* Animated gradient for hero background */
@@ -15,34 +16,54 @@
       background-size: 400% 400%;
       animation: gradientShift 10s ease infinite;
     }
+
     @keyframes gradientShift {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
+
     .fade-in {
       animation: fadeIn 1.2s ease-in-out;
     }
+
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
-<body class="bg-sky-950 text-white font-semibold text-black">
+
+<body class="bg-sky-950 text-white font-awesome text-black">
 
   <!-- 🌐 Navbar -->
   <nav class="backdrop-blur-lg bg-gray-800/70 fixed w-full top-0 left-0 z-50 shadow-md">
     <div class="container mx-auto flex justify-between items-center py-3 px-6">
       <div class="flex items-center space-x-3">
         <img src="./images/image1.png" alt="Logo" class="w-14 h-14 rounded-full bg-yellow-500">
-      
+
       </div>
 
       <input type="checkbox" id="checkbox" class="hidden peer">
       <label for="checkbox" class="menu md:hidden text-3xl cursor-pointer text-yellow-400">☰</label>
 
-      <ul class="absolute md:static bg-gray-800/90 md:bg-transparent top-[60px] left-0 w-full md:w-auto flex flex-col md:flex-row items-center md:space-x-8 space-y-6 md:space-y-0 py-6 md:py-0 text-lg font-medium transition-all duration-300 ease-in-out hidden md:flex peer-checked:flex">
+      <ul
+        class="absolute md:static bg-gray-800/90 md:bg-transparent top-[60px] left-0 w-full md:w-auto flex flex-col md:flex-row items-center md:space-x-8 space-y-6 md:space-y-0 py-6 md:py-0 text-lg font-medium transition-all duration-300 ease-in-out hidden md:flex peer-checked:flex">
         <li><a href="#hero" class="hover:text-yellow-400">Home</a></li>
         <li><a href="#about" class="hover:text-yellow-400">About</a></li>
         <li><a href="#services" class="hover:text-yellow-400">Services</a></li>
@@ -59,44 +80,49 @@
   <div class="h-[70px]"></div>
 
   <!--  Hero Section -->
-<section id="hero" class="animated-gradient min-h-[90vh] flex flex-col md:flex-row justify-center items-center gap-12 px-10 text-center md:text-left fade-in bg-white text-black">
-  <div class="max-w-2xl">
-    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
-      Hi, I'm <span class="text-yellow-500">Abduaslam</span>
-    </h1>
+  <section id="hero"
+    class="animated-gradient min-h-[90vh] flex flex-col md:flex-row justify-center items-center gap-12 px-10 text-center md:text-left fade-in bg-white text-black">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+        Hi, I'm <span class="text-yellow-500">Abduaslam</span>
+      </h1>
 
-    <!-- Typing animation target -->
-    <p id="typing-text" class="text-xl md:text-2xl text-black mb-6 font-medium"></p>
+      <!-- Typing animation target -->
+      <p id="typing-text" class="text-xl md:text-2xl text-black mb-6 font-medium"></p>
 
-    <p class="text-black mb-8 leading-relaxed text-2xl font-awesome">
-      I build responsive, modern websites with clean design, smooth user experience, and powerful data-driven backends.
-    </p>
+      <p class="text-black mb-8 leading-relaxed text-2xl font-awesome">
+        I build responsive, modern websites with clean design, smooth user experience, and powerful data-driven
+        backends.
+      </p>
 
-    <!-- Buttons -->
-    <div class="flex justify-center md:justify-start space-x-4 mb-8">
-      <a href="./Resume.html" class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
-        View My Resume
-      </a>
-      <a href="#contact" class="border border-yellow-400 text-yellow-500 hover:bg-yellow-400 hover:text-gray-900 px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
-        Contact Me
-      </a>
+      <!-- Buttons -->
+      <div class="flex justify-center md:justify-start space-x-4 mb-8">
+        <a href="./Resume.html"
+          class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
+          View My Resume
+        </a>
+        <a href="#contact"
+          class="border border-yellow-400 text-yellow-500 hover:bg-yellow-400 hover:text-gray-900 px-6 py-3 rounded-full font-semibold transition transform hover:scale-105">
+          Contact Me
+        </a>
+      </div>
+
+      <!-- Social icons -->
+      <div class="flex justify-center md:justify-start space-x-6 text-2xl">
+        <a href="https://linkedin.com" target="_blank" class="hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank" class="hover:text-yellow-500"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com" target="_blank" class="hover:text-yellow-500"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" class="hover:text-yellow-500"><i class="fab fa-x-twitter"></i></a>
+      </div>
     </div>
 
-    <!-- Social icons -->
-    <div class="flex justify-center md:justify-start space-x-6 text-2xl">
-      <a href="https://linkedin.com" target="_blank" class="hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com" target="_blank" class="hover:text-yellow-500"><i class="fab fa-github"></i></a>
-      <a href="https://instagram.com" target="_blank" class="hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com" target="_blank" class="hover:text-yellow-500"><i class="fab fa-x-twitter"></i></a>
+    <!-- Profile Image -->
+    <div class="md:w-1/3">
+      <img src="./images/A.png" alt="Profile"
+        class="w-60 h-60 md:w-72 md:h-72 rounded-full border-4 border-yellow-400 shadow-xl hover:scale-105 hover:rotate-3 transition-transform duration-500">
     </div>
-  </div>
-
-  <!-- Profile Image -->
-  <div class="md:w-1/3">
-    <img src="./images/A.png" alt="Profile"
-         class="w-60 h-60 md:w-72 md:h-72 rounded-full border-4 border-yellow-400 shadow-xl hover:scale-105 hover:rotate-3 transition-transform duration-500">
-  </div>
-</section>
+  </section>
 
 
 
@@ -107,9 +133,10 @@
     <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
       <div class="p-6 bg-white text-black rounded-2xl shadow-lg ">
         <h3 class="text-2xl font-semibold mb-3">Who I Am</h3>
-        <p>I’m Abdu Asalam, a passionate Data Analyst and Backend Developer who loves turning data into insights and building scalable systems.</p>
+        <p>I’m Abdu Asalam, a passionate Data Analyst and Backend Developer who loves turning data into insights and
+          building scalable systems.</p>
       </div>
-       <div class="p-6 bg-white text-black rounded-2xl shadow-lg ">
+      <div class="p-6 bg-white text-black rounded-2xl shadow-lg ">
         <h3 class="text-2xl font-semibold mb-3">What I Do</h3>
         <p>I analyze datasets, create dashboards, and build secure APIs using Python, SQL, and Node.js.</p>
       </div>
@@ -128,73 +155,71 @@
         <h3 class="text-xl font-semibold mb-2">Data Cleaning</h3>
         <p>Prepare and clean raw data for analysis by removing errors and inconsistencies.</p>
       </div>
-     <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
         <h3 class="text-xl font-semibold mb-2">Data Analysis</h3>
         <p>Transform data into actionable insights using Python, Excel, or Power BI.</p>
       </div>
-     <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
         <h3 class="text-xl font-semibold mb-2">Backend Development</h3>
         <p>Design and build RESTful APIs and backend systems using Django or Node.js.</p>
       </div>
-     <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition ">
         <h3 class="text-xl font-semibold mb-2">Automation</h3>
         <p>Automate repetitive tasks and improve workflow efficiency using scripting.</p>
       </div>
     </div>
   </section>
 
-  <!-- 🚀 Projects -->
+  <!--  Projects -->
   <section id="project" class="py-20 px-10 ">
     <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Projects</h2>
     <div class=" grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
-  <h3 class="text-xl font-semibold mb-2">Mahama Care Hospital</h3>
-  <img src="./images/mahamaHospital.png"  alt="" class="rounded-2xl  w-15 h-15 mb-10">
-  <p class="text-gray-700">
-    This project excuted by me and my friend ,A modern web project deployed on Vercel, demonstrating interactive features and responsive design. 
-    Built with JavaScript, HTML, and CSS, it focuses on clean UI and smooth user experience.
-  </p>
-  <a href="https://foursity-eight.vercel.app/" 
-     target="_blank"
-     class="text-yellow-400 hover:underline mt-3 block">
-    View Project →
-  </a>
-</div>
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-xl font-semibold mb-2">Mahama Care Hospital</h3>
+        <img src="./images/mahamaHospital.png" alt="" class="rounded-2xl  w-15 h-15 mb-10">
+        <p class="text-gray-700">
+          This project excuted by me and my friend ,A modern web project deployed on Vercel, demonstrating interactive
+          features and responsive design.
+          Built with JavaScript, HTML, and CSS, it focuses on clean UI and smooth user experience.
+        </p>
+        <a href="https://foursity-eight.vercel.app/" target="_blank" class="text-yellow-400 hover:underline mt-3 block">
+          View Project →
+        </a>
+      </div>
 
-    
+
 
       <div class=" p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
-  <h3 class="text-xl font-semibold mb-2">Insert & Find Data App</h3>
-  <img src="images/inserAndFnd.png" class="w-15 h-15 rounded-2xl" alt="">
-  <p class="text-gray-700">A dynamic JavaScript app for inserting and finding data efficiently using DOM manipulation.</p>
-  <a href="https://illustrious-pika-51ab67.netlify.app/" 
-     target="_blank"
-     class="text-yellow-400 hover:underline mt-3 block">
-    View Project →
-  </a>
-</div>
+        <h3 class="text-xl font-semibold mb-2">Insert & Find Data App</h3>
+        <img src="images/inserAndFnd.png" class="w-15 h-15 rounded-2xl" alt="">
+        <p class="text-gray-700">A dynamic JavaScript app for inserting and finding data efficiently using DOM
+          manipulation.</p>
+        <a href="https://illustrious-pika-51ab67.netlify.app/" target="_blank"
+          class="text-yellow-400 hover:underline mt-3 block">
+          View Project →
+        </a>
+      </div>
 
-<div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
-  <h3 class="text-xl font-semibold mb-2">Random Text Generator</h3>
-  <img src="./images/generateText.png" class="mb-10 text-center" alt="">
-  <p class="text-gray-700">A JavaScript project that generates random text with a typing effect for interactive learning and fun.</p>
-  <a href="https://your-text-generator-link.com/" 
-     target="_blank"
-     class="text-yellow-400 hover:underline mt-3 block">
-    View Project →
-  </a>
-</div>
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-xl font-semibold mb-2">Random Text Generator</h3>
+        <img src="./images/generateText.png" class="mb-10 text-center" alt="">
+        <p class="text-gray-700">A JavaScript project that generates random text with a typing effect for interactive
+          learning and fun.</p>
+        <a href="https://your-text-generator-link.com/" target="_blank"
+          class="text-yellow-400 hover:underline mt-3 block">
+          View Project →
+        </a>
+      </div>
 
-  <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
-  <h3 class="text-center bg-white font-semibold mb-2">X Y Game</h3>
-  <img src="./images/XOGame.png" alt="" class="w-15 h-15 rounded-2xl ">
-  <p class="text-black">A fun interactive JavaScript game that challenges players to find X and Y positions using DOM logic.</p>
-  <a href="https://abduaslam.github.io/XY-Game/" 
-     target="_blank"
-     class="text-yellow-400 hover:underline mt-3 block">
-    View Project →
-  </a>
-</div>
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition transform duration-300">
+        <h3 class="text-center bg-white font-semibold mb-2">X Y Game</h3>
+        <img src="./images/XOGame.png" alt="" class="w-15 h-15 rounded-2xl ">
+        <p class="text-black">A fun interactive JavaScript game that challenges players to find X and Y positions using
+          DOM logic.</p>
+        <a href="https://x-o-gameee.netlify.app/" target="_blank" class="text-yellow-400 hover:underline mt-3 block">
+          View Project →
+        </a>
+      </div>
 
 
       <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition">
@@ -202,7 +227,7 @@
         <p>Modern portfolio UI created in Figma focusing on minimal, responsive layout.</p>
         <a href="#" class="text-yellow-400 hover:underline mt-3 block">View Design →</a>
       </div>
-       <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition">
+      <div class="p-6 bg-white text-black rounded-xl shadow-lg hover:scale-105 transition">
         <h3 class="text-xl font-semibold mb-2">Web Scraping</h3>
         <p>Python web scraper for e-commerce data collection and analysis.</p>
         <a href="#" class="text-yellow-400 hover:underline mt-3 block">View on GitHub →</a>
@@ -210,39 +235,40 @@
     </div>
   </section>
 
-  <!-- 🧠 Skills -->
+  <!--  Skills -->
   <section id="Skills" class="py-20 px-10 ">
-    <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">My Skills</h2>
+    <h2 class="text-4xl font- text-center text-yellow-400 mb-12">My Skills</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-      <div class="p-6 bg-white text-black rounded-2xl shadow-lg">
-        <h3 class="text-xl font-semibold mb-3">Frontend</h3>
-        <img src="/images/front.png" alt="" class="rounded-2xl  h-60 w-90">
+      <div class="p-6 bg-white  text-black rounded-2xl shadow-lg">
+        <h3 class="text-xl  mb-3">Frontend</h3>
+        <img src="./images/front.png" alt="" class="rounded-2xl  h-60 w-90">
         <ul class="space-y-2">
           <li>HTML, CSS, JS</li>
           <li>React (Basic)</li>
           <li>Tailwind CSS</li>
         </ul>
       </div>
-        <div class="p-6 bg-white text-black ounded-xl shadow-lg rounded-2xl ">
-        <h3 class="text-xl font-semibold mb-3">Backend</h3>
-        <img src="/images/backend.jpeg" alt="" class="rounded-2xl  h-60 w-90">
+      <div class="p-6 bg-white text-black ounded-xl shadow-lg rounded-2xl ">
+        <h3 class="text-xl mb-3">Backend</h3>
+        <img src="./images/backend.jpeg" alt="" class="rounded-2xl  h-60 w-90">
         <ul class="space-y-2 ">
           <li>Node.js, Express</li>
           <li>Django</li>
+          <li>Firebase</li>
           <li>REST APIs</li>
         </ul>
       </div>
-        <div class="p-6 bg-white text-black ounded-xl shadow-lg rounded-2xl ">
-        <h3 class="text-xl font-semibold mb-3">Data Analysis</h3>
-        <img src="/images/analysis.jpeg" alt="" class="rounded-2xl  h-60 w-90">
+      <div class="p-6 bg-white text-black ounded-xl shadow-lg rounded-2xl ">
+        <h3 class="text-xl  mb-3">Data Analysis</h3>
+        <img src="./images/analysis.jpeg" alt="" class="rounded-2xl  h-60 w-90">
         <ul class="space-y-2 ">
           <li>Python, Pandas, NumPy</li>
-          <li>Power BI, Excel</li>
+          <li>Public Tableau, Excel</li>
           <li>SQL</li>
         </ul>
       </div>
       <div class="p-6 bg-white text-black ounded-xl shadow-lg rounded-2xl ">
-        <h3 class="text-xl font-semibold mb-3">Tools</h3>
+        <h3 class="text-xl  mb-3">Tools</h3>
         <img src="/images/version.jpeg" alt="" class="rounded-2xl  h-60 w-90">
         <ul class="space-y-2 ">
           <li>Git & GitHub</li>
@@ -255,7 +281,7 @@
 
   <!-- 📩 Contact -->
   <section id="contact" class="py-20 px-10 ">
-    <h2 class="text-4xl font-bold text-center text-yellow-400 mb-12">Contact Me</h2>
+    <h2 class="text-4xl  text-center text-yellow-400 mb-12">Contact Me</h2>
     <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
       <div class="space-y-6">
         <div>
@@ -271,11 +297,20 @@
           <p class="mt-2">Rwanda</p>
         </div>
       </div>
-      <form action="https://formsubmit.co/abduaslam098@gmail.com" method="POST" class="bg-white text-black p-6 rounded-xl space-y-4 shadow-lg">
-        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 rounded bg-blue-200 text-black border border-gray-700 focus:ring-2 focus:ring-yellow-400" required>
-        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 rounded bg-blue-200 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400" required>
-        <textarea name="message" placeholder="Your Message" rows="4" class="w-full p-3 rounded bg-blue-200 text-white border border-gray-700 focus:ring-2 focus:ring-yellow-400" required></textarea>
-        <button type="submit" class="w-full bg-yellow-400 text-gray-900 py-3 rounded font-semibold hover:bg-yellow-500 transition">Send Message</button>
+      <form action="https://formsubmit.co/abduaslam098@gmail.com" method="POST"
+        class="bg-white text-black p-6 rounded-xl space-y-4 shadow-lg">
+        <input type="text" name="name" placeholder="Your Name"
+          class="w-full p-3 rounded bg-blue-200 text-black border border-gray-700 focus:ring-2 focus:ring-yellow-400"
+          required>
+        <input type="email" name="email" placeholder="Your Email"
+          class="w-full p-3 rounded bg-blue-200 text-black border border-gray-700 focus:ring-2 focus:ring-yellow-400"
+          required>
+        <textarea name="message" placeholder="Your Message" rows="4"
+          class="w-full p-3 rounded bg-blue-200 text-black border border-gray-700 focus:ring-2 focus:ring-yellow-400"
+          required></textarea>
+        <button id="ContactBtn" type="submit"
+          class="w-full bg-yellow-400 text-gray-900 py-3 rounded font-semibold hover:bg-yellow-500 transition">Send
+          Message</button>
       </form>
     </div>
   </section>
@@ -283,24 +318,27 @@
   <!-- ⚡ Footer -->
   <footer class="bg-gray-800 py-10 text-center border-t border-gray-700">
     <div class="mb-4">
-      <a href="https://github.com/abduaslam" class="mx-3 text-yellow-400 hover:text-yellow-500"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com" class="mx-3 text-yellow-400 hover:text-yellow-500"><i class="fab fa-linkedin"></i></a>
-      <a href="https://twitter.com" class="mx-3 text-yellow-400 hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
-      <a href="https://facebook.com" class="mx-3 text-yellow-400 hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
+      <a href="https://github.com/abduaslam" class="mx-3 text-yellow-400 hover:text-yellow-500"><i
+          class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" class="mx-3 text-yellow-400 hover:text-yellow-500"><i
+          class="fab fa-linkedin"></i></a>
+      <a href="https://twitter.com" class="mx-3 text-yellow-400 hover:text-yellow-500"><i
+          class="fab fa-twitter"></i></a>
+      <a href="https://facebook.com" class="mx-3 text-yellow-400 hover:text-yellow-500"><i
+          class="fab fa-facebook"></i></a>
     </div>
     <p class="text-gray-400">© 2025 Abdalsalam | All Rights Reserved</p>
   </footer>
 
-   <body>
-  <!-- Your hero section -->
-  <p id="typing-text"></p>
+  <body>
+    <!-- Your hero section -->
+    <p id="typing-text"></p>
 
-  <script src="/script.js">
- 
-  </script>
+    <script src="/script.js">
+
+    </script>
+  </body>
+
 </body>
 
-</body>
 </html>
-
-

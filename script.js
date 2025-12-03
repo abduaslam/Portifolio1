@@ -26,3 +26,9 @@
     // Start typing once page loads
     document.addEventListener("DOMContentLoaded", typeEffect);
 
+    // portifolio contact form
+    let ContactBtn=document.getElementById("ContactBtn");
+    ContactBtn.addEventListener('click',()=>{
+      alert("Your data have been sent")
+    })
+
