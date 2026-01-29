@@ -3,122 +3,232 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Blog | Abdalsalam Yagoub Idris</title>
+  <title>Abduaslam | Blog</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --secondary: #7c3aed;
+      --accent: #06b6d4;
+      --dark: #0f172a;
+      --light: #f8fafc;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .glass {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .blog-card {
+      transition: all 0.3s ease;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    
+    .category-tag {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: white;
+    }
+  </style>
 </head>
-
-<body class="bg-gray-900 text-gray-100 font-inter  leading-relaxed">
-
-    <nav class="backdrop-blur-lg bg-gray-800/70 fixed w-full top-0 left-0 z-50 shadow-md">
-    <div class="container mx-auto flex justify-between items-center py-3 px-6">
+<body class="bg-slate-900 text-slate-100">
+  <!-- Navigation -->
+  <nav class="glass fixed w-full top-0 z-50 py-4 px-6 shadow-lg">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
       <div class="flex items-center space-x-3">
-        <img src="./images/image1.png" alt="Logo" class="w-14 h-14 rounded-full bg-yellow-500">
-
+        <a href="index.html" class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
+            <span class="font-bold text-white">AA</span>
+          </div>
+          <span class="text-xl font-bold gradient-text">Abduaslam</span>
+        </a>
       </div>
-
-      <input type="checkbox" id="checkbox" class="hidden peer">
-      <label for="checkbox" class="menu md:hidden text-3xl cursor-pointer text-yellow-400">☰</label>
-
-      <ul
-        class="absolute md:static bg-gray-800/90 md:bg-transparent top-[60px] left-0 w-full md:w-auto flex flex-col md:flex-row items-center md:space-x-8 space-y-6 md:space-y-0 py-6 md:py-0 text-lg font-medium transition-all duration-300 ease-in-out hidden md:flex peer-checked:flex">
-        <li><a href="./index.html#hero" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="./index.html#about" class="hover:text-yellow-400">About</a></li>
-        <li><a href="./index.html#services" class="hover:text-yellow-400">Services</a></li>
-        <li><a href="./index.html#project" class="hover:text-yellow-400">Projects</a></li>
-        <li><a href="./index.html#Skills" class="hover:text-yellow-400">Skills</a></li>
-        <li><a href="./index.html#contact" class="hover:text-yellow-400">Contact</a></li>
-        <!-- <li><a href="./blog.html" class="hover:text-yellow-400">Blog</a></li> -->
-        <!-- <li><a href="./sign-in.html" class="hover:text-yellow-400">Login</a></li>
-        <li><a href="./sign-up.html" class="hover:text-yellow-400">Sign Up</a></li> -->
-      </ul>
+      <div class="flex space-x-4">
+        <a href="index.html" class="text-slate-300 hover:text-cyan-400 transition-colors">
+          <i class="fas fa-home mr-2"></i>Home
+        </a>
+        <a href="resume.html" class="text-slate-300 hover:text-cyan-400 transition-colors">
+          <i class="fas fa-file-alt mr-2"></i>Resume
+        </a>
+      </div>
     </div>
   </nav>
-  <!-- Header -->
-  <header class="text-center py-10 border-b border-gray-700">
-    
-   
-  </header>
 
-  <!-- Blog Section -->
-  <section class="max-w-6xl mx-auto p-6 space-y-10">
-
-    <!-- Backend Blog -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-yellow-400/30 transition p-6 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2">
-        <img src="./images/backend.jpeg" alt="Backend API" class="rounded-xl w-full object-cover">
-      </div>
-      <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
-        <h3 class="text-2xl font-semibold text-yellow-300">Building a REST API with Node.js & Express</h3>
-        <p class="text-white  mt-3">
-          Step-by-step guide to creating a secure REST API with CRUD operations and connecting it to a MySQL database.
-        </p>
-        <a href="https://blog.logrocket.com/build-rest-api-node-express-mysql/?utm_source=chatgpt.com" 
-           class="inline-block mt-4 bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition">
-           Read More
-        </a>
-      </div>
+  <div class="pt-24 pb-12 px-6 max-w-7xl mx-auto">
+    <!-- Blog Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Tech Insights & Tutorials</h1>
+      <p class="text-xl text-slate-300">Sharing knowledge about Data Analysis, Backend Development, and Technology</p>
     </div>
 
-    <!-- Frontend Blog 1 -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-yellow-400/30 transition p-6 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 md:order-2">
-        <img src="./images/blog-frontend.png" alt="Responsive UI" class="rounded-xl w-full object-cover">
-      </div>
-      <div class="md:w-1/2 md:pr-8 mt-6 md:mt-0">
-        <h3 class="text-2xl font-semibold text-yellow-300">Creating a Responsive Dashboard UI</h3>
-        <p class="text-white  mt-3">
-          How I built a clean, responsive dashboard using HTML, CSS (Flexbox & Grid), and a bit of JavaScript.
-        </p>
-        <a href="https://www.geeksforgeeks.org/javascript/how-to-create-responsive-admin-dashboard-using-html-css-javascript/?utm_source=chatgpt.com" 
-           class="inline-block mt-4 bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition">
-           Read More
-        </a>
-      </div>
+    <!-- Categories -->
+    <div class="flex flex-wrap gap-4 mb-12 justify-center">
+      <button class="category-tag px-4 py-2 rounded-full font-semibold">All Posts</button>
+      <button class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-full font-semibold transition-colors">Data Analysis</button>
+      <button class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-full font-semibold transition-colors">Backend Development</button>
+      <button class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-full font-semibold transition-colors">Web Development</button>
+      <button class="bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-full font-semibold transition-colors">Tutorials</button>
     </div>
 
-    <!-- Frontend Blog 2 -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-yellow-400/30 transition p-6 flex flex-col md:flex-row items-center">
-      <div class="md:w-1/2 md:order-2">
-        <img src="./images/my-portoflio.png" alt="Portfolio Project" class="rounded-xl w-full object-cover">
-      </div>
-      <div class="md:w-1/2 md:pr-8 mt-6 md:mt-0">
-        <h3 class="text-2xl font-semibold text-yellow-300">Designing My Portfolio Website</h3>
-         <p class="text-white  mt-3">
-          Behind the scenes of building my personal portfolio — layout, colors, and making it mobile-friendly.
-        </p>
-         <a href="https://www.amitgrinson.com/blog/window-function-with-groupby/?utm_source=chatgpt.com" 
-           class="inline-block mt-4 bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition">
-           Read More
-        </a>
-       
-       
-      </div>
+    <!-- Blog Posts -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Post 1 -->
+      <article class="blog-card glass rounded-2xl overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data Analysis" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-cyan-400">Data Analysis</span>
+            <span class="text-sm text-slate-400">Jan 15, 2024</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Getting Started with Python for Data Analysis</h3>
+          <p class="text-slate-300 mb-4">
+            Learn the essential Python libraries and techniques for effective data analysis in this beginner-friendly guide.
+          </p>
+          <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center">
+            Read More <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="blog-card glass rounded-2xl overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Backend Development" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-purple-400">Backend Development</span>
+            <span class="text-sm text-slate-400">Dec 20, 2023</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Building RESTful APIs with Node.js and Express</h3>
+          <p class="text-slate-300 mb-4">
+            A comprehensive guide to creating scalable and secure REST APIs using modern JavaScript frameworks.
+          </p>
+          <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center">
+            Read More <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="blog-card glass rounded-2xl overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data Visualization" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-emerald-400">Data Visualization</span>
+            <span class="text-sm text-slate-400">Nov 10, 2023</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Creating Interactive Dashboards with Tableau</h3>
+          <p class="text-slate-300 mb-4">
+            Transform your data into compelling visual stories with advanced Tableau dashboard techniques.
+          </p>
+          <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center">
+            Read More <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 4 -->
+      <article class="blog-card glass rounded-2xl overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SQL Tutorial" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-blue-400">Tutorial</span>
+            <span class="text-sm text-slate-400">Oct 5, 2023</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">SQL for Data Analysis: Essential Queries</h3>
+          <p class="text-slate-300 mb-4">
+            Master the most important SQL queries for data analysis and database management.
+          </p>
+          <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center">
+            Read More <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 5 -->
+      <article class="blog-card glass rounded-2xl overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Development" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-yellow-400">Web Development</span>
+            <span class="text-sm text-slate-400">Sep 18, 2023</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Modern Web Development with Tailwind CSS</h3>
+          <p class="text-slate-300 mb-4">
+            Build beautiful, responsive websites faster using the utility-first CSS framework.
+          </p>
+          <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center">
+            Read More <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 6 -->
+      <article class="blog-card glass rounded-2xl overflow-hidden">
+        <div class="h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Career Advice" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-pink-400">Career</span>
+            <span class="text-sm text-slate-400">Aug 22, 2023</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Transitioning to Data Analysis: A Roadmap</h3>
+          <p class="text-slate-300 mb-4">
+            Essential steps and resources for starting a career in data analysis from scratch.
+          </p>
+          <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center">
+            Read More <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </article>
     </div>
 
-    <!-- Data Analysis Blog -->
-    <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-yellow-400/30 transition p-6 flex flex-col md:flex-row items-center">
-      
-      <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0">
-        <h3 class="text-2xl font-semibold text-yellow-300">10 SQL Queries Every Data Analyst Should Know</h3>
-        <p class="text-white  mt-3">
-          From SELECT and JOINs to aggregations and window functions — examples with real-world datasets.
-        </p>
-        <a href="blog-sql-queries.html" 
-           class="inline-block mt-4 bg-yellow-400 text-gray-900 font-semibold px-5 py-2 rounded-full hover:bg-yellow-300 transition">
-           Read More
-        </a>
-      </div>
-      <div class="md:w-1/2">
-        <img src="./images/query.png" alt="SQL Queries" class="rounded-xl w-full object-cover">
-      </div>
+    <!-- Newsletter -->
+    <div class="glass rounded-2xl p-8 mt-12 text-center">
+      <h2 class="text-3xl font-bold mb-4 gradient-text">Subscribe to My Newsletter</h2>
+      <p class="text-slate-300 mb-6 max-w-2xl mx-auto">
+        Get the latest articles on data analysis, backend development, and tech insights directly in your inbox.
+      </p>
+      <form class="max-w-md mx-auto flex">
+        <input type="email" placeholder="Your email address" 
+               class="flex-1 px-4 py-3 bg-slate-800 border border-slate-700 rounded-l-lg focus:outline-none focus:border-cyan-500">
+        <button type="submit" 
+                class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-3 rounded-r-lg font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all">
+          Subscribe
+        </button>
+      </form>
     </div>
-
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-gray-500 text-sm py-10 border-t border-gray-700 mt-12">
-    © 2025 Abdalsalam Yagoub Idris — All rights reserved.
-  </footer>
-
+  </div>
 </body>
 </html>
