@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abduaslam | Data Analyst & Backend Developer</title>
-  
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <style>
     :root {
       --primary: #2563eb;
@@ -33,12 +36,17 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--dark);
+      background-color: #0f172a;
       color: var(--light);
       overflow-x: hidden;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-family: 'Poppins', sans-serif;
     }
 
@@ -46,9 +54,11 @@
     ::-webkit-scrollbar {
       width: 10px;
     }
+
     ::-webkit-scrollbar-track {
       background: var(--dark-light);
     }
+
     ::-webkit-scrollbar-thumb {
       background: linear-gradient(to bottom, var(--primary), var(--secondary));
       border-radius: 5px;
@@ -60,6 +70,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -67,9 +78,12 @@
     }
 
     @keyframes float {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0);
       }
+
       50% {
         transform: translateY(-10px);
       }
@@ -79,17 +93,26 @@
       0% {
         background-position: 0% 50%;
       }
+
       50% {
         background-position: 100% 50%;
       }
+
       100% {
         background-position: 0% 50%;
       }
     }
 
     @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
     }
 
     .animate-fade-in-up {
@@ -126,12 +149,12 @@
 
     .project-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);
     }
 
     /* Glass morphism */
     .glass {
-      background: rgba(15, 23, 42, 0.7);
+      background: rgba(30, 41, 59, 0.7);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
@@ -139,21 +162,6 @@
     /* Section spacing */
     section {
       scroll-margin-top: 80px;
-    }
-
-    /* Skill levels without percentages */
-    .skill-level {
-      height: 100%;
-      border-radius: 4px;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-      width: 0;
-      animation: fillBar 1.5s ease-out forwards;
-    }
-
-    @keyframes fillBar {
-      to {
-        width: var(--skill-level);
-      }
     }
 
     /* Typing animation container */
@@ -184,10 +192,49 @@
       height: 2px;
       background: linear-gradient(90deg, var(--primary), var(--accent));
     }
+
+    /* Hidden projects */
+    .hidden-projects {
+      display: none;
+    }
+
+    .show-projects {
+      display: grid !important;
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    /* Project image styling */
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    }
+
+    /* Container padding */
+    .section-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .section-container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
+    }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-100">
 
+<body class="bg-slate-900 text-slate-100">
   <!-- Navigation -->
   <nav class="glass fixed w-full top-0 z-50 py-4 px-6 shadow-lg">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -206,7 +253,8 @@
         <a href="#skills" class="nav-link hover:text-cyan-400 transition-colors">Skills</a>
         <a href="#projects" class="nav-link hover:text-cyan-400 transition-colors">Projects</a>
         <a href="#contact" class="nav-link hover:text-cyan-400 transition-colors">Contact</a>
-        <a href="./resume.html" class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all">
+        <a href="./resume.html"
+          class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/30 transition-all">
           Resume
         </a>
         <a href="./blog.html" class="nav-link hover:text-cyan-400 transition-colors">Blog</a>
@@ -226,7 +274,8 @@
         <a href="#skills" class="hover:text-cyan-400 transition-colors py-2">Skills</a>
         <a href="#projects" class="hover:text-cyan-400 transition-colors py-2">Projects</a>
         <a href="#contact" class="hover:text-cyan-400 transition-colors py-2">Contact</a>
-        <a href="./resume.html" class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full font-semibold text-center">
+        <a href="./resume.html"
+          class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-6 py-2 rounded-full font-semibold text-center">
           Resume
         </a>
         <a href="./blog.html" class="hover:text-cyan-400 transition-colors py-2">Blog</a>
@@ -235,7 +284,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center pt-20 pb-10 px-6">
+  <section id="home" class="min-h-screen flex items-center pt-20 pb-10 px-6 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <!-- Left Content -->
       <div class="space-y-6 animate-fade-in-up">
@@ -251,29 +300,43 @@
             <span class="cursor-blink text-cyan-400 text-3xl">|</span>
           </div>
         </div>
-        
+
         <p class="text-xl text-slate-300 leading-relaxed">
-          Data Analyst & Backend Developer specializing in transforming complex data into actionable insights 
-          and building scalable backend systems. Passionate about creating efficient solutions that drive 
+          Data Analyst & Backend Developer specializing in transforming complex data into actionable insights
+          and building scalable backend systems. Passionate about creating efficient solutions that drive
           business growth and innovation.
         </p>
 
         <div class="flex flex-wrap gap-4 pt-4">
-          <a href="#contact" class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/30 transition-all">
+          <a href="#contact"
+            class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/30 transition-all">
             <i class="fas fa-paper-plane mr-2"></i>Contact Me
           </a>
-          <a href="./resume.html" class="border border-slate-600 text-slate-300 hover:border-cyan-500 hover:text-cyan-400 px-8 py-3 rounded-full font-semibold transition-all">
+          <a href="./resume.html"
+            class="border border-slate-600 text-slate-300 hover:border-cyan-500 hover:text-cyan-400 px-8 py-3 rounded-full font-semibold transition-all">
             <i class="fas fa-file-alt mr-2"></i>View Resume
           </a>
         </div>
 
         <!-- Social Links -->
         <div class="flex items-center space-x-6 pt-8">
-          <a href="https://github.com/abduaslam" target="_blank" class="text-2xl text-slate-400 hover:text-white transition-colors">
+          <a href="https://github.com/abduaslam" target="_blank"
+            class="text-2xl text-slate-400 hover:text-white transition-colors">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://linkedin.com/in/abduaslam" target="_blank" class="text-2xl text-slate-400 hover:text-blue-500 transition-colors">
+          <a href="https://www.linkedin.com/in/abdalsalm-yagoub-6057723a9" target="_blank"
+            class="text-2xl text-slate-400 hover:text-blue-500 transition-colors">
             <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://public.tableau.com/app/profile/abdalsalamyagoub/vizzes" target="_blank"
+            rel="noopener noreferrer" title="View my Tableau dashboards"
+            class="text-2xl text-slate-400 hover:text-blue-500 transition-colors">
+            <i class="fas fa-chart-line"></i>
+          </a>
+          <a href="https://www.coursera.org" target="_blank" rel="noopener noreferrer"
+            class="text-2xl text-slate-400 hover:text-blue-500 transition-colors flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg" alt="Coursera"
+              class="w-6 h-6 opacity-70 hover:opacity-100 transition" />
           </a>
           <a href="mailto:abduaslam098@gmail.com" class="text-2xl text-slate-400 hover:text-red-400 transition-colors">
             <i class="fas fa-envelope"></i>
@@ -284,11 +347,14 @@
       <!-- Right Content - Profile Image -->
       <div class="relative flex justify-center animate-float">
         <div class="relative">
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
-          <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl">
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-blue-500 via-cyan-500 to-purple-500 rounded-full blur-2xl opacity-20">
+          </div>
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 shadow-2xl">
             <img src="./images/A.jpg" alt="Abduaslam" class="w-full h-full object-cover">
           </div>
-          <div class="absolute -bottom-4 -right-4 bg-slate-800 p-4 rounded-2xl shadow-xl">
+          <div class="absolute -bottom-4 -right-4 glass p-4 rounded-2xl shadow-xl">
             <div class="text-center">
               <div class="text-2xl font-bold text-cyan-400">2+</div>
               <div class="text-sm text-slate-400">Years Experience</div>
@@ -300,7 +366,7 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 px-6 bg-slate-800/50">
+  <section id="about" class="py-20 px-6 bg-slate-800/30">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold mb-4">
@@ -312,33 +378,43 @@
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-slate-800/70 p-8 rounded-2xl hover:bg-slate-800 transition-all border border-slate-700 hover:border-cyan-500/30">
-          <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-6">
+        <div
+          class="glass p-8 rounded-2xl hover:bg-slate-800/70 transition-all border border-slate-700 hover:border-cyan-500/30">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mb-6">
             <i class="fas fa-user text-2xl"></i>
           </div>
           <h3 class="text-2xl font-bold mb-4">Background</h3>
           <p class="text-slate-300">
-            I'm a dedicated Data Analyst and Backend Developer with expertise in transforming raw data into meaningful insights and building robust backend systems. My journey combines technical skills with business understanding.
+            I'm a dedicated Data Analyst and Backend Developer with expertise in transforming raw data into meaningful
+            insights and building robust backend systems. My journey combines technical skills with business
+            understanding.
           </p>
         </div>
 
-        <div class="bg-slate-800/70 p-8 rounded-2xl hover:bg-slate-800 transition-all border border-slate-700 hover:border-purple-500/30">
-          <div class="w-14 h-14 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6">
+        <div
+          class="glass p-8 rounded-2xl hover:bg-slate-800/70 transition-all border border-slate-700 hover:border-purple-500/30">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mb-6">
             <i class="fas fa-code text-2xl"></i>
           </div>
           <h3 class="text-2xl font-bold mb-4">Expertise</h3>
           <p class="text-slate-300">
-            Specializing in data analysis with Python, SQL, and visualization tools, along with backend development using Node.js and modern web technologies. I focus on creating scalable, efficient solutions.
+            Specializing in data analysis with Python, SQL, and visualization tools, along with backend development
+            using Node.js and modern web technologies. I focus on creating scalable, efficient solutions.
           </p>
         </div>
 
-        <div class="bg-slate-800/70 p-8 rounded-2xl hover:bg-slate-800 transition-all border border-slate-700 hover:border-green-500/30">
-          <div class="w-14 h-14 rounded-full bg-gradient-to-r from-green-600 to-emerald-500 flex items-center justify-center mb-6">
+        <div
+          class="glass p-8 rounded-2xl hover:bg-slate-800/70 transition-all border border-slate-700 hover:border-green-500/30">
+          <div
+            class="w-14 h-14 rounded-full bg-gradient-to-r from-green-600 to-emerald-500 flex items-center justify-center mb-6">
             <i class="fas fa-bullseye text-2xl"></i>
           </div>
           <h3 class="text-2xl font-bold mb-4">Approach</h3>
           <p class="text-slate-300">
-            I believe in combining data insights with technical excellence to solve complex problems. My approach focuses on understanding business needs and delivering solutions that drive real value.
+            I believe in combining data insights with technical excellence to solve complex problems. My approach
+            focuses on understanding business needs and delivering solutions that drive real value.
           </p>
         </div>
       </div>
@@ -359,9 +435,10 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Frontend Skills -->
-        <div class="bg-slate-800/70 p-6 rounded-2xl border border-slate-700">
+        <div class="glass p-6 rounded-2xl border border-slate-700">
           <div class="flex items-center mb-6">
-            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mr-4">
+            <div
+              class="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mr-4">
               <i class="fas fa-paint-brush text-xl"></i>
             </div>
             <h3 class="text-xl font-bold">Frontend Development</h3>
@@ -387,9 +464,10 @@
         </div>
 
         <!-- Backend Skills -->
-        <div class="bg-slate-800/70 p-6 rounded-2xl border border-slate-700">
+        <div class="glass p-6 rounded-2xl border border-slate-700">
           <div class="flex items-center mb-6">
-            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mr-4">
+            <div
+              class="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mr-4">
               <i class="fas fa-server text-xl"></i>
             </div>
             <h3 class="text-xl font-bold">Backend Development</h3>
@@ -415,9 +493,10 @@
         </div>
 
         <!-- Data Analysis -->
-        <div class="bg-slate-800/70 p-6 rounded-2xl border border-slate-700">
+        <div class="glass p-6 rounded-2xl border border-slate-700">
           <div class="flex items-center mb-6">
-            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-green-600 to-emerald-500 flex items-center justify-center mr-4">
+            <div
+              class="w-12 h-12 rounded-lg bg-gradient-to-r from-green-600 to-emerald-500 flex items-center justify-center mr-4">
               <i class="fas fa-chart-line text-xl"></i>
             </div>
             <h3 class="text-xl font-bold">Data Analysis</h3>
@@ -443,9 +522,10 @@
         </div>
 
         <!-- Tools & Technologies -->
-        <div class="bg-slate-800/70 p-6 rounded-2xl border border-slate-700">
+        <div class="glass p-6 rounded-2xl border border-slate-700">
           <div class="flex items-center mb-6">
-            <div class="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-600 to-yellow-500 flex items-center justify-center mr-4">
+            <div
+              class="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-600 to-yellow-500 flex items-center justify-center mr-4">
               <i class="fas fa-tools text-xl"></i>
             </div>
             <h3 class="text-xl font-bold">Tools & Technologies</h3>
@@ -474,7 +554,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-20 px-6 bg-slate-800/50">
+  <section id="projects" class="py-20 px-6 bg-slate-800/30">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold mb-4">
@@ -485,19 +565,24 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Featured Projects (Always Visible) -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
         <!-- Project 1 -->
-        <a href="https://foursity-eight.vercel.app/" target="_blank" class="project-card bg-slate-800/70 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500/50 transition-all no-underline group">
-          <div class="h-48 overflow-hidden">
-            <img src="./images/mahamaHospital.png" alt="Mahama Care Hospital" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="project-card glass rounded-2xl overflow-hidden border border-slate-700">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-blue-900/30 to-cyan-900/30 flex items-center justify-center">
+            <img src="./images/mahamaHospital.png" alt="Mahama Care Hospital"
+              class="project-image object-contain p-2">
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-bold text-white">Mahama Care Hospital</h3>
-              <i class="fas fa-external-link-alt text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+              <a href="https://foursity-eight.vercel.app/" target="_blank" class="text-cyan-400 hover:text-cyan-300">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
             <p class="text-slate-300 mb-4">
-              Modern healthcare web platform with interactive features, responsive design, and clean UI built with JavaScript, HTML, and CSS.
+              Modern healthcare web platform with interactive features, responsive design, and clean UI built with
+              JavaScript, HTML, and CSS.
             </p>
             <div class="flex flex-wrap gap-2">
               <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-sm">JavaScript</span>
@@ -505,20 +590,24 @@
               <span class="px-3 py-1 bg-cyan-900/30 text-cyan-400 rounded-full text-sm">Vercel</span>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- Project 2 -->
-        <a href="https://abduaslam.github.io/Find-Weather-in-Different-Cities/" target="_blank" class="project-card bg-slate-800/70 rounded-2xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all no-underline group">
-          <div class="h-48 overflow-hidden">
-            <img src="./images/wheather.jpg" alt="Weather App" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="project-card glass rounded-2xl overflow-hidden border border-slate-700">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-blue-900/30 to-green-900/30 flex items-center justify-center">
+            <img src="./images/wheather.jpg" alt="Weather App"
+              class="project-image object-contain p-2">
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-bold text-white">Weather Finder</h3>
-              <i class="fas fa-external-link-alt text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+              <a href="https://abduaslam.github.io/Find-Weather-in-Different-Cities/" target="_blank" class="text-blue-400 hover:text-blue-300">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
             <p class="text-slate-300 mb-4">
-              Real-time weather application with city search, forecast display, and interactive UI using public weather API.
+              Real-time weather application with city search, forecast display, and interactive UI using public weather
+              API.
             </p>
             <div class="flex flex-wrap gap-2">
               <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-sm">JavaScript</span>
@@ -526,17 +615,20 @@
               <span class="px-3 py-1 bg-yellow-900/30 text-yellow-400 rounded-full text-sm">Responsive</span>
             </div>
           </div>
-        </a>
+        </div>
 
         <!-- Project 3 -->
-        <a href="https://x-o-gameee.netlify.app/" target="_blank" class="project-card bg-slate-800/70 rounded-2xl overflow-hidden border border-slate-700 hover:border-purple-500/50 transition-all no-underline group">
-          <div class="h-48 overflow-hidden">
-            <img src="./images/XOGame.png" alt="XO Game" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        <div class="project-card glass rounded-2xl overflow-hidden border border-slate-700">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-purple-900/30 to-pink-900/30 flex items-center justify-center">
+            <img src="./images/XOGame.png" alt="XO Game"
+              class="project-image object-contain p-2">
           </div>
           <div class="p-6">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-bold text-white">XO Game</h3>
-              <i class="fas fa-external-link-alt text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+              <a href="https://x-o-gameee.netlify.app/" target="_blank" class="text-purple-400 hover:text-purple-300">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
             <p class="text-slate-300 mb-4">
               Interactive JavaScript game with DOM manipulation, strategic gameplay, and responsive design.
@@ -547,14 +639,91 @@
               <span class="px-3 py-1 bg-indigo-900/30 text-indigo-400 rounded-full text-sm">DOM</span>
             </div>
           </div>
-        </a>
+        </div>
       </div>
 
+      <!-- Hidden Projects (Initially Hidden) -->
+      <div id="more-projects" class="hidden-projects grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 4 -->
+        <div class="project-card glass rounded-2xl overflow-hidden border border-slate-700">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-green-900/30 to-emerald-900/30 flex items-center justify-center">
+            <img src="./images/inserAndFnd.png" alt="Insert & Find Data App"
+              class="project-image object-contain p-2">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-white">Insert & Find Data App</h3>
+              <a href="https://illustrious-pika-51ab67.netlify.app/" target="_blank" class="text-green-400 hover:text-green-300">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+            <p class="text-slate-300 mb-4">
+              Dynamic JavaScript application for efficient data insertion and retrieval using advanced DOM manipulation.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-green-900/30 text-green-400 rounded-full text-sm">JavaScript</span>
+              <span class="px-3 py-1 bg-teal-900/30 text-teal-400 rounded-full text-sm">DOM</span>
+              <span class="px-3 py-1 bg-emerald-900/30 text-emerald-400 rounded-full text-sm">Netlify</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card glass rounded-2xl overflow-hidden border border-slate-700">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-yellow-900/30 to-orange-900/30 flex items-center justify-center">
+            <img src="./images/generateText.png" alt="Text Generator"
+              class="project-image object-contain p-2">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-white">Random Text Generator</h3>
+              <span class="text-yellow-400">
+                <i class="fas fa-code"></i>
+              </span>
+            </div>
+            <p class="text-slate-300 mb-4">
+              JavaScript project that generates random text with typing effects for interactive learning and UI testing.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-yellow-900/30 text-yellow-400 rounded-full text-sm">JavaScript</span>
+              <span class="px-3 py-1 bg-orange-900/30 text-orange-400 rounded-full text-sm">Animations</span>
+              <span class="px-3 py-1 bg-amber-900/30 text-amber-400 rounded-full text-sm">UI/UX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card glass rounded-2xl overflow-hidden border border-slate-700">
+          <div class="h-48 overflow-hidden bg-gradient-to-br from-pink-900/30 to-rose-900/30 flex items-center justify-center">
+            <img src="./images/analysis.jpeg" alt="Data Analysis"
+              class="project-image object-contain p-2">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold text-white">Data Analysis Dashboard</h3>
+              <span class="text-pink-400">
+                <i class="fas fa-chart-bar"></i>
+              </span>
+            </div>
+            <p class="text-slate-300 mb-4">
+              Comprehensive data visualization dashboard using Python, Pandas, and Tableau for business insights.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-pink-900/30 text-pink-400 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-rose-900/30 text-rose-400 rounded-full text-sm">Pandas</span>
+              <span class="px-3 py-1 bg-fuchsia-900/30 text-fuchsia-400 rounded-full text-sm">Tableau</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View More Button -->
       <div class="text-center mt-12">
-        <a href="#contact" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
-          <i class="fas fa-arrow-right mr-2"></i>
-          View More Projects
-        </a>
+        <button id="view-more-btn"
+          class="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-blue-500/30 transition-all">
+          <i class="fas fa-plus mr-2"></i>
+          <span id="btn-text">View More Projects</span>
+        </button>
       </div>
     </div>
   </section>
@@ -574,24 +743,27 @@
       <div class="grid lg:grid-cols-2 gap-12">
         <!-- Contact Info -->
         <div class="space-y-8">
-          <div class="bg-slate-800/70 p-8 rounded-2xl border border-slate-700">
+          <div class="glass p-8 rounded-2xl border border-slate-700">
             <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
-            
+
             <div class="space-y-6">
               <div class="flex items-center">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mr-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 flex items-center justify-center mr-4">
                   <i class="fas fa-envelope text-white"></i>
                 </div>
                 <div>
                   <p class="text-slate-400">Email</p>
-                  <a href="mailto:abduaslam098@gmail.com" class="text-lg font-semibold hover:text-cyan-400 transition-colors">
+                  <a href="mailto:abduaslam098@gmail.com"
+                    class="text-lg font-semibold hover:text-cyan-400 transition-colors">
                     abduaslam098@gmail.com
                   </a>
                 </div>
               </div>
 
               <div class="flex items-center">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mr-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center mr-4">
                   <i class="fas fa-phone text-white"></i>
                 </div>
                 <div>
@@ -603,7 +775,8 @@
               </div>
 
               <div class="flex items-center">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-r from-green-600 to-emerald-500 flex items-center justify-center mr-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-gradient-to-r from-green-600 to-emerald-500 flex items-center justify-center mr-4">
                   <i class="fas fa-map-marker-alt text-white"></i>
                 </div>
                 <div>
@@ -614,19 +787,19 @@
             </div>
           </div>
 
-          <div class="bg-slate-800/70 p-8 rounded-2xl border border-slate-700">
+          <div class="glass p-8 rounded-2xl border border-slate-700">
             <h3 class="text-2xl font-bold mb-6">Connect With Me</h3>
             <div class="flex space-x-6">
-              <a href="https://github.com/abduaslam" target="_blank" 
-                 class="w-14 h-14 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-2xl transition-all hover:scale-110">
+              <a href="https://github.com/abduaslam" target="_blank"
+                class="w-14 h-14 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-2xl transition-all hover:scale-110">
                 <i class="fab fa-github"></i>
               </a>
-              <a href="https://linkedin.com/in/abduaslam" target="_blank"
-                 class="w-14 h-14 rounded-full bg-slate-700 hover:bg-blue-600 flex items-center justify-center text-2xl transition-all hover:scale-110">
+              <a href="https://www.linkedin.com/in/abdalsalm-yagoub-6057723a9" target="_blank"
+                class="w-14 h-14 rounded-full bg-slate-700 hover:bg-blue-600 flex items-center justify-center text-2xl transition-all hover:scale-110">
                 <i class="fab fa-linkedin-in"></i>
               </a>
               <a href="mailto:abduaslam098@gmail.com"
-                 class="w-14 h-14 rounded-full bg-slate-700 hover:bg-red-600 flex items-center justify-center text-2xl transition-all hover:scale-110">
+                class="w-14 h-14 rounded-full bg-slate-700 hover:bg-red-600 flex items-center justify-center text-2xl transition-all hover:scale-110">
                 <i class="fas fa-envelope"></i>
               </a>
             </div>
@@ -634,32 +807,32 @@
         </div>
 
         <!-- Contact Form -->
-        <div class="bg-slate-800/70 p-8 rounded-2xl border border-slate-700">
+        <div class="glass p-8 rounded-2xl border border-slate-700">
           <form action="https://formsubmit.co/abduaslam098@gmail.com" method="POST" class="space-y-6">
             <div class="grid md:grid-cols-2 gap-6">
               <div>
                 <label class="block text-slate-300 mb-2 font-medium">Name</label>
-                <input type="text" name="name" required 
-                       class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
+                <input type="text" name="name" required
+                  class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
               </div>
               <div>
                 <label class="block text-slate-300 mb-2 font-medium">Email</label>
                 <input type="email" name="email" required
-                       class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
+                  class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
               </div>
             </div>
             <div>
               <label class="block text-slate-300 mb-2 font-medium">Subject</label>
               <input type="text" name="subject" required
-                     class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
+                class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
             </div>
             <div>
               <label class="block text-slate-300 mb-2 font-medium">Message</label>
               <textarea name="message" rows="5" required
-                        class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors resize-none"></textarea>
+                class="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors resize-none"></textarea>
             </div>
             <button type="submit"
-                    class="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold py-4 rounded-lg hover:shadow-xl hover:shadow-blue-500/30 transition-all">
+              class="w-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold py-4 rounded-lg hover:shadow-xl hover:shadow-blue-500/30 transition-all">
               Send Message <i class="fas fa-paper-plane ml-2"></i>
             </button>
           </form>
@@ -669,7 +842,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-slate-800/70 py-12 px-6 border-t border-slate-700">
+  <footer class="bg-slate-800/80 py-12 px-6 border-t border-slate-700">
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-8 md:mb-0">
@@ -679,200 +852,45 @@
           </div>
           <p class="text-slate-400">Data Analyst & Backend Developer</p>
         </div>
-        
+
         <div class="flex space-x-6 mb-8 md:mb-0">
-          <a href="https://github.com/abduaslam" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+          <a href="https://github.com/abduaslam" target="_blank"
+            class="text-slate-400 hover:text-white transition-colors">
             <i class="fab fa-github text-2xl"></i>
           </a>
-          <a href="https://linkedin.com/in/abduaslam" target="_blank" class="text-slate-400 hover:text-blue-400 transition-colors">
+          <a href="https://www.linkedin.com/in/abdalsalm-yagoub-6057723a9" target="_blank"
+            class="text-slate-400 hover:text-blue-400 transition-colors">
             <i class="fab fa-linkedin text-2xl"></i>
           </a>
           <a href="mailto:abduaslam098@gmail.com" class="text-slate-400 hover:text-red-400 transition-colors">
             <i class="fas fa-envelope text-2xl"></i>
           </a>
         </div>
-        
+
         <div class="flex space-x-4">
-          <a href="./resume.html" class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full font-semibold transition-colors text-sm">
+          <a href="./resume.html"
+            class="bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-full font-semibold transition-colors text-sm">
             Resume
           </a>
-          <a href="./blog.html" class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-full font-semibold transition-colors text-sm">
+          <a href="./blog.html"
+            class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-2 rounded-full font-semibold transition-colors text-sm">
             Blog
           </a>
         </div>
       </div>
-      
+
       <div class="border-t border-slate-700 mt-12 pt-8 text-center">
         <p class="text-slate-400">
           © 2024 Abduaslam. All rights reserved. | Designed for job opportunities
         </p>
         <p class="text-slate-500 text-sm mt-2">
-          Ready for Data Analysis & Backend Development roles
+          Ready for Data Analysis & Frontend Development roles
         </p>
       </div>
     </div>
   </footer>
 
   <!-- JavaScript -->
-  <script>
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      const icon = mobileMenuBtn.querySelector('i');
-      if (mobileMenu.classList.contains('hidden')) {
-        icon.className = 'fas fa-bars';
-      } else {
-        icon.className = 'fas fa-times';
-      }
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-        const icon = mobileMenuBtn.querySelector('i');
-        icon.className = 'fas fa-bars';
-      }
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          // Close mobile menu if open
-          mobileMenu.classList.add('hidden');
-          const icon = mobileMenuBtn.querySelector('i');
-          icon.className = 'fas fa-bars';
-          
-          // Smooth scroll
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Typing Animation
-    class TypingAnimation {
-      constructor(elementId, texts, options = {}) {
-        this.element = document.querySelector(elementId);
-        this.texts = texts;
-        this.options = {
-          typingSpeed: 100,
-          deletingSpeed: 50,
-          pauseTime: 2000,
-          ...options
-        };
-        this.currentTextIndex = 0;
-        this.currentCharIndex = 0;
-        this.isDeleting = false;
-        this.isPaused = false;
-        
-        this.init();
-      }
-      
-      init() {
-        this.type();
-      }
-      
-      type() {
-        const currentText = this.texts[this.currentTextIndex];
-        
-        if (!this.isDeleting && this.currentCharIndex <= currentText.length) {
-          this.element.textContent = currentText.substring(0, this.currentCharIndex);
-          this.currentCharIndex++;
-          setTimeout(() => this.type(), this.options.typingSpeed);
-        } else if (this.isDeleting && this.currentCharIndex >= 0) {
-          this.element.textContent = currentText.substring(0, this.currentCharIndex);
-          this.currentCharIndex--;
-          setTimeout(() => this.type(), this.options.deletingSpeed);
-        } else if (!this.isDeleting && this.currentCharIndex > currentText.length) {
-          this.isPaused = true;
-          setTimeout(() => {
-            this.isPaused = false;
-            this.isDeleting = true;
-            setTimeout(() => this.type(), 500);
-          }, this.options.pauseTime);
-        } else if (this.isDeleting && this.currentCharIndex < 0) {
-          this.isDeleting = false;
-          this.currentTextIndex = (this.currentTextIndex + 1) % this.texts.length;
-          setTimeout(() => this.type(), 500);
-        }
-      }
-    }
-
-    // Initialize typing animation when page loads
-    document.addEventListener('DOMContentLoaded', () => {
-      const typingTexts = [
-        "Data Analyst",
-        "Backend Developer",
-        "Problem Solver",
-        "Tech Enthusiast"
-      ];
-      
-      new TypingAnimation('.typing-text', typingTexts);
-      
-      // Add initial animation to hero content
-      const heroContent = document.querySelector('#home > div > div');
-      if (heroContent) {
-        heroContent.classList.add('animate-fade-in-up');
-      }
-    });
-
-    // Add active class to nav links on scroll
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    window.addEventListener('scroll', () => {
-      let current = '';
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (scrollY >= (sectionTop - 150)) {
-          current = section.getAttribute('id');
-        }
-      });
-      
-      navLinks.forEach(link => {
-        link.classList.remove('nav-active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('nav-active');
-        }
-      });
-    });
-
-    // Form submission feedback
-    const contactForm = document.querySelector('form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-        submitBtn.disabled = true;
-        
-        // Revert after 3 seconds
-        setTimeout(() => {
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          
-          // Show success message
-          alert('Thank you for your message! I will get back to you soon.');
-        }, 3000);
-      });
-    }
-  </script>
+<script src="./script.js"></script>
 </body>
 </html>
